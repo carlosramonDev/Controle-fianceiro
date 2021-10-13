@@ -17,10 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/finace', function () {
-    return view('finace');
+Route::get('/finance', function () {
+    return view('finance');
 });
+
 Route::get('/report', function () {
     return view('report');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
