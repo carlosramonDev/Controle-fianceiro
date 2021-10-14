@@ -30,3 +30,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+/* Ex. parametro em rota */
+Route::get('/product/{id}', function ($id) {
+    return view('product', ['id' => $id]);
+});
