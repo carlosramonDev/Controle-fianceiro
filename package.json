@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@iconscout/vue-unicons": "^0.0.3",
+    "axios": "^0.24.0",
+    "chart.js": "^3.6.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.1",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

@@ -43,9 +43,9 @@ export default {
   height:calc(100vh - 8.4rem);
   width: 14.3rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  padding: 0.9rem;
+  left: 0;
   flex-direction: column;
 }
 .navbar{

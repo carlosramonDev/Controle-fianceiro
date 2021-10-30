@@ -1,18 +1,22 @@
 <template>
   <div>
     <footer class="footer">
-      <p>Feito com pela Tecnosystem</p>
+      <p>Feito com <UilHeart/> pela Tecnosystem</p>
     </footer>
   </div>
 </template>
 
 <script>
+import { UilHeart } from '@iconscout/vue-unicons'
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    UilHeart
+  }
 }
 </script>
 
-<style>
+<style >
 .footer {
   display: flex;
   align-items: center;
@@ -22,4 +26,5 @@ export default {
   width: 100%;
   background-color: var(--dark-color);
 }
+
 </style>

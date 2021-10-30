@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <!-- header -->
     <Header/>
     <div class="container">
     <Navbar/>
     <router-view/>
     </div>
     <Footer/>
-    <!-- Footer -->
   </div>
 </template>
 <script>
