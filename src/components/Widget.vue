@@ -1,7 +1,7 @@
 <template>
-  <div class="widget">
+  <div class="widget" >
       <h3>{{title}}</h3>
-      <p>{{number}}</p>
+      <span>{{number}}</span>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'Widget',
   props: {
     title: String,
-    number: Number
+    number: [Number, String]
   }
 }
 </script>

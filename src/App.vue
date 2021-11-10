@@ -44,9 +44,19 @@ li{
 body{
   font-size: 1.6rem;
   font-family: 'Oswald', 'Helvetica';
+   /* background-color: #f8f8f8; */
+   background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));
 
 }
 .container{
   display:flex;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 </style>

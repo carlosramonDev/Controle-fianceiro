@@ -29,6 +29,9 @@ export default {
   color: #f8f8f8;
   border:none;
   border-radius: .5rem;
-
+  cursor: pointer;
+}
+.btn:hover{
+   --primary-color:#ff79c5b2;
 }
 </style>

@@ -11,7 +11,7 @@
              <router-link to="/Users"><UilUsersAlt/>Usuários</router-link>
           </li>
            <li>
-             <router-link to="/Financer"><UilDollarAlt/>Finaceiro</router-link>
+             <router-link to="/Finance"><UilDollarAlt/>Finaceiro</router-link>
           </li>
            <li>
              <router-link to="/Relatorio"><UilReceiptAlt/>Relatório</router-link>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Finance from '../views/Finance.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,6 +18,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/Users.vue')
+  },
+  {
+    path: '/Finance',
+    name: 'Finance',
+    component: Finance
   }
 ]
 
