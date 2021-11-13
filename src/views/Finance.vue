@@ -1,12 +1,16 @@
 <template>
 <div class="financer">
-<h1>Financer</h1>
+<financeForm/>
 </div>
 </template>
 
 <script>
+import financeForm from '../components/Financer/financerForm.vue'
 export default {
-  name: 'Financer'
+  name: 'Financer',
+  components: {
+    financeForm
+  }
 }
 </script>
 

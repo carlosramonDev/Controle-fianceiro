@@ -36,6 +36,7 @@ li{
   list-style: none;
 }
 :root{
+  accent-color: deeppink;
  --dark-color:#282a36;
  --primary-color:#FF79C6;
  --secondary-color:#383A59;
