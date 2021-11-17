@@ -12,8 +12,6 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    // Os atributos que podem ser atribuídos em massa.
-
     protected $fillable = [
         'name',
         'email',
@@ -23,14 +21,10 @@ class User extends Authenticatable
         'genre',
     ];
 
-   // Oculta atributos de JSON
-
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
-   // Os atributos que devem ser lançados.
 
     protected $casts = [
         'email_verified_at' => 'datetime',

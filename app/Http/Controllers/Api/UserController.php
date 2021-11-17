@@ -28,14 +28,14 @@ class UserController extends Controller
         $users->genre = $request->input('genre');
     
         if( $users->save() ){
-          return new UserResource( $users );
+          return response()->json($users);
         }
       }
 
    // Pega um id e retorna um único usuario. Se nenhum usuario correspondente existir, ele gerará um erro.
     public function show($id){
         $users = User::findOrFail( $id );
-        return new UserResource( $users );
+        return response()->json($users);
       }
 
   // Atualizar de usuario
@@ -49,15 +49,14 @@ class UserController extends Controller
         $users->genre = $request->input('genre');
     
         if( $users->save() ){
-          return new UserResource( $users );
+          return response()->json($users);
         }
       } 
 
-    // Deletar usuario
     public function destroy($id){
         $users = User::findOrFail( $id );
         if( $users->delete() ){
-          return new UserResource( $users );
+          return response()->json($users);
         }
     
       }

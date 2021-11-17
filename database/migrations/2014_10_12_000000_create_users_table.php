@@ -5,8 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
-{// O up método é usado para adicionar novas tabelas, colunas ou índices ao seu banco de dados
-
+{
     //Cadastrar usuario
     public function up() 
     {  
@@ -23,8 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
     }
-
-    // O down método deve reverter as operações realizadas pelo up método
+    
     public function down() 
     {
         Schema::dropIfExists('users');
