@@ -9,11 +9,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ // Aponta para usuario.
     public function index()
     {
         $users = User::all();
@@ -21,48 +17,48 @@ class UserController extends Controller
         return response()->json($users);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+  // Novo usuario.
+    public function store(Request $request){
+        $users = new User;
+        $users->name = $request->input('name');
+        $users->email = $request->input('email');
+        $users->password = $request->input('password');
+        $users->cpf = $request->input('cpf');
+        $users->date = $request->input('date');
+        $users->genre = $request->input('genre');
+    
+        if( $users->save() ){
+          return new UserResource( $users );
+        }
+      }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+   // Pega um id e retorna um único usuario. Se nenhum usuario correspondente existir, ele gerará um erro.
+    public function show($id){
+        $users = User::findOrFail( $id );
+        return new UserResource( $users );
+      }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+  // Atualizar de usuario
+    public function update(Request $request){
+        $users = User::findOrFail( $request->id );
+        $users->name = $request->input('name');
+        $users->email = $request->input('email');
+        $users->password = $request->input('password');
+        $users->cpf = $request->input('cpf');
+        $users->date = $request->input('date');
+        $users->genre = $request->input('genre');
+    
+        if( $users->save() ){
+          return new UserResource( $users );
+        }
+      } 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    // Deletar usuario
+    public function destroy($id){
+        $users = User::findOrFail( $id );
+        if( $users->delete() ){
+          return new UserResource( $users );
+        }
+    
+      }
 }
